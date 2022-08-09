@@ -1,0 +1,14 @@
+.page-footer {
+  color: var(--color-top);
+  background-color: var(--color-bg-footer);
+  text-align: center;
+  overflow: auto;
+  min-height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    font-size: var(--page-footer-font-size);
+    color: var(--color-footer-text);
+  }
+}

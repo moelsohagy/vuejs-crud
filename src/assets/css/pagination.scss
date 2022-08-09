@@ -1,0 +1,118 @@
+.hide-pagination .pagination-container {
+  display: none;
+}
+
+.pagination-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "pagination-actions pagination-statistics";
+  gap: 10px;
+  background-color: #fefefe;
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+  border-radius: var(--pagination-input-border-raduis);
+
+  .pagination-actions {
+    grid-area: pagination-actions;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    .pagination-pages {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .btn-pagination {
+        width: 25px;
+        height: 25px;
+        background-color: var(--pagination-input-bg);
+        color: #fff;
+        border-radius: 15px;
+        margin: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+      }
+      .btn-pagination-search {
+        width: 25px;
+        height: 25px;
+        background-color: var(--pagination-input-bg);
+        color: #fff;
+        border-radius: 15px;
+        margin: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 100%;
+        }
+      }
+      .search-input {
+        width: auto;
+        margin: 0 3px;
+        padding: 0;
+        input {
+          border-radius: var(--pagination-input-border-raduis);
+          padding: 0 20px;
+          height: 40px;
+          width: 150px;
+        }
+        label,
+        img {
+          display: none;
+        }
+      }
+    }
+
+    .pagination-filter {
+      .selectBox {
+        margin: 0;
+        .multiselect {
+          border-radius: var(--pagination-input-border-raduis) !important;
+          .multiselect__tags {
+            .multiselect__single {
+              grid-template-columns: 0 100%;
+            }
+            .multiselect__input {
+              margin-inline: 0;
+            }
+          }
+        }
+        .placeholder-image {
+          display: none;
+        }
+      }
+      .pageSizeSelectBox {
+        width: 150px;
+      }
+    }
+  }
+
+  .pagination-statistics {
+    grid-area: pagination-statistics;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    gap: 5px;
+    span {
+      display: flex;
+      font-size: 1rem;
+      width: 100%;
+      border: 1px solid var(--color-input-border);
+      color: #444;
+      border-radius: var(--pagination-input-border-raduis);
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.v-application--is-rtl {
+  .btn-pagination-search {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
