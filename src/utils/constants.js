@@ -1,4 +1,4 @@
-export const BASE_URL = "https://api-pls-dev-1.3.premcoprecast.com";
+export const BASE_URL = "https://example.com";
 export const USER_PLATFORM_SESSION_VERSION_NUMBER = "1.0";
 export const ESTABLISHMENT_TOKEN = "f92dfb74-9cb9-44ad-b5ad-a946c3d1018f";
 
